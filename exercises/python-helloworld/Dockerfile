@@ -8,7 +8,7 @@ LABEL maintainer="Lyuben Branzalov"
 # to the  `/app` directory in the container
 COPY . /app/exercises/python-helloworld
 #  defines the working directory within the container
-WORKDIR /app//exercises/python-helloworld
+WORKDIR /app/exercises/python-helloworld
 # run commands within the container. 
 # For example, invoke a pip command 
 # to install dependencies defined in the requirements.txt file. 
