@@ -7,15 +7,12 @@ LABEL maintainer="Lyuben Branzalov"
 # For example, all the files in the current directory
 # to the  `/app` directory in the container
 # ENV set environment directory tree
-ENV PROJECT=mysite
-ENV CONTAINER_HOME=/opt
-ENV CONTAINER_PROJECT=$CONTAINER_HOME/$PROJECT
 
 # move to project WORKDIR
-WORKDIR $CONTAINER_PROJECT
+WORKDIR /usr/bin/docker/
 
 # COPY project to container directory
-COPY . $CONTAINER_PROJECT
+COPY . /usr/bin/docker/
 # run commands within the container. 
 # For example, invoke a pip command 
 # to install dependencies defined in the requirements.txt file. 
