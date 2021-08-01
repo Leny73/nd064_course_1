@@ -8,7 +8,7 @@ LABEL maintainer="Lyuben Branzalov"
 # to the  `/app` directory in the container
 COPY . /app
 WORKDIR /app
-RUN pip install -r /requirements.txt
+RUN pip install -r requirements.txt
 
 # provide a command to run on container start. 
 # For example, start the `app.py` application.
