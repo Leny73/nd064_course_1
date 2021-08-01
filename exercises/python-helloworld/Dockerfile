@@ -6,10 +6,9 @@ LABEL maintainer="Lyuben Branzalov"
 # copy files from the host to the container filesystem. 
 # For example, all the files in the current directory
 # to the  `/app` directory in the container
-RUN mkdir /app
-COPY . /app
-WORKDIR /app
-RUN export PYTHONPATH=/usr/bin/python
+WORKDIR /project
+ADD . /project
+
 RUN pip install -r requirements.txt
 
 # provide a command to run on container start. 
