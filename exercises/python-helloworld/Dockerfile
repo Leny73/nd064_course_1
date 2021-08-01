@@ -9,10 +9,10 @@ LABEL maintainer="Lyuben Branzalov"
 # ENV set environment directory tree
 
 # move to project WORKDIR
-WORKDIR /usr/bin/docker/
+WORKDIR /app
 
 # COPY project to container directory
-COPY . /usr/bin/docker/
+COPY . /app
 # run commands within the container. 
 # For example, invoke a pip command 
 # to install dependencies defined in the requirements.txt file. 
