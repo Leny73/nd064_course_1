@@ -6,11 +6,20 @@ LABEL maintainer="Lyuben Branzalov"
 # copy files from the host to the container filesystem. 
 # For example, all the files in the current directory
 # to the  `/app` directory in the container
-WORKDIR /project
-ADD . /project
+# ENV set environment directory tree
+ENV PROJECT=mysite
+ENV CONTAINER_HOME=/opt
+ENV CONTAINER_PROJECT=$CONTAINER_HOME/$PROJECT
 
+# move to project WORKDIR
+WORKDIR $CONTAINER_PROJECT
+
+# COPY project to container directory
+COPY . $CONTAINER_PROJECT
+# run commands within the container. 
+# For example, invoke a pip command 
+# to install dependencies defined in the requirements.txt file. 
 RUN pip install -r requirements.txt
-
 # provide a command to run on container start. 
 # For example, start the `app.py` application.
 CMD [ "python", "app.py" ]
