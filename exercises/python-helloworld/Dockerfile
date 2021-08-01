@@ -6,9 +6,9 @@ LABEL maintainer="Lyuben Branzalov"
 # copy files from the host to the container filesystem. 
 # For example, all the files in the current directory
 # to the  `/app` directory in the container
-COPY . /app
+COPY . /exercises/python-helloworld/
 #  defines the working directory within the container
-WORKDIR /app
+WORKDIR /exercises/python-helloworld/
 # run commands within the container. 
 # For example, invoke a pip command 
 # to install dependencies defined in the requirements.txt file. 
